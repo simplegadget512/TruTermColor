@@ -55,21 +55,21 @@ when they are brightened. Black is raised a bit to give it some floorspace when 
 at the bottom.
 """
 PALETTE = {
-    'white': Color(hex='#FFFFFF') * .95,
-    'silver': Color(hex='#C0C0C0'),
-    'gray': Color(hex='#808080'),
+    'white': Color(hex='#FFFFFF') * .96,
+    'silver': Color(hex='#C0C0C0') * .96,
+    'gray': Color(hex='#808080') * .96,
     'black': Color(rgb=(30, 30, 30)),
-    'red': Color(hex='#FF0000'),
+    'red': Color(hex='#FF0000') * .96,
     'maroon': Color(hex='#800000'),
-    'yellow': Color(hex='#FFFF00'),
+    'yellow': Color(hex='#FFFF00') * .96,
     'olive': Color(hex='#808000'),
-    'lime': Color(hex='#00FF00'),
+    'lime': Color(hex='#00FF00') * .96,
     'green': Color(hex='#008000'),
-    'aqua': Color(hex='#00FFFF'),
+    'aqua': Color(hex='#00FFFF') * .96,
     'teal': Color(hex='#008080'),
     'blue': Color(hex='#0000FF'),
     'navy': Color(hex='#000080'),
-    'fuschia': Color(hex='#FF00FF'),
+    'fuschia': Color(hex='#FF00FF') * .96,
     'purple': Color(hex='#800080'),
 
     # Non-standard colors
@@ -116,7 +116,7 @@ if __name__ == '__main__':
         # print the color names and their components
         c_demo = ''.join([color_text(' \u25CF ', PALETTE[fg], PALETTE[bg]) for bg in PALETTE])
         c_name = fore_text('{:<12}:'.format(fg, str(PALETTE[fg])), PALETTE[fg], {Attributes.BOLD})
-        print('{} {} {}'.format(c_demo, c_name, PALETTE[fg]))
+        print('{} {} {}/{}'.format(c_demo, c_name, PALETTE[fg].hex, PALETTE[fg]))
     print()
     color_print('Text Attributes', PALETTE['white'], PALETTE['black'], {Attributes.BOLD, Attributes.UNDERLINED})
     fore_print('NOTE: Some of the following codes may not be implemented in your terminal software', PALETTE['white'])
