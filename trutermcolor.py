@@ -11,10 +11,10 @@ class Attributes(Enum):
     DIM = 2
     ITALIC = 3
     UNDERLINED = 4
-#    BLINK = 5
+    BLINK = 5
     REVERSE = 7
-#    INVISIBLE = 8
-#    STRIKETHRU = 9
+    INVISIBLE = 8
+    STRIKETHRU = 9
 
 
 class Color(colorutils.Color):
