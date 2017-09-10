@@ -7,11 +7,13 @@ from enum import Enum
 
 
 class Attributes(Enum):
+    """https://en.wikipedia.org/wiki/ANSI_escape_code#Sequence_elements for reference"""
     BOLD = 1
     DIM = 2
     ITALIC = 3
     UNDERLINED = 4
     BLINK = 5
+    FASTBLINK = 6
     REVERSE = 7
     INVISIBLE = 8
     STRIKETHRU = 9
