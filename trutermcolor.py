@@ -13,10 +13,10 @@ class Attributes(Enum):
     ITALIC = 3
     UNDERLINED = 4
     BLINK = 5
-    FASTBLINK = 6
+    FASTBLINK = 6       # not supported in iTerm :(
     REVERSE = 7
-    INVISIBLE = 8
-    STRIKETHRU = 9
+    INVISIBLE = 8       # ditto :(
+    STRIKETHRU = 9      # ditto ditto :(
 
 
 class Color(colorutils.Color):
